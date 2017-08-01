@@ -4,6 +4,7 @@ class MembersController < ApplicationController
   end
 
   def search
+    # member.rbのsearchアクションを利用
     @members = Member.search(params[:q])
     render "index"
   end
