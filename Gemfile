@@ -37,6 +37,7 @@ group :development, :test do
   gem 'byebug'
   gem 'haml-rails'
   gem 'erb2haml'
+  gem 'pry-rails'
 
 end
 
