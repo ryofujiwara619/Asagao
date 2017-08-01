@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170731081351) do
+ActiveRecord::Schema.define(version: 20170731140215) do
 
   create_table "members", force: :cascade do |t|
     t.integer  "number",        limit: 4,                   null: false
