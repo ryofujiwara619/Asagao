@@ -8,7 +8,7 @@ class MembersController < ApplicationController
   end
 
   def new
-    @member = Member.new(birthday: date.new(1980, ,1, 1))
+    @member = Member.new(birthday: Date.new(1980, 1, 1))
   end
 
   def edit
