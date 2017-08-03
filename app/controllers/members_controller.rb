@@ -14,7 +14,7 @@ class MembersController < ApplicationController
   def create
     @member = Member.new(params[:member])
     if @member.save
-      redirect_to member_path(@member.id), notine: "会員を登録しました"
+      redirect_to member_path(@member.id), notice: "会員を登録しました"
     else
       render "new"
     end
