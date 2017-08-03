@@ -34,6 +34,12 @@ class MembersController < ApplicationController
     end
   end
 
+  def destroy
+    @member = Member.find(params[:id])
+    @member.destroy
+    redirect_to members_path, notice: "会員を削除しました"
+  end
+
   def search
     # member.rbのsearchアクションを利用
     @members = Member.search(params[:q])
