@@ -11,6 +11,10 @@ class MembersController < ApplicationController
     @member = Member.new(birthday: date.new(1980, ,1, 1))
   end
 
+  def edit
+    @member = Member.find(params[:id])
+  end
+
   def search
     # member.rbのsearchアクションを利用
     @members = Member.search(params[:q])
