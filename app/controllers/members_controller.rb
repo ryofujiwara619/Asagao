@@ -24,6 +24,16 @@ class MembersController < ApplicationController
     @member = Member.find(params[:id])
   end
 
+  def update
+    @member = Member.find(params[:id])
+    @member.assign_attributes(params[:member])
+    if @member.save
+      redirect_to member_path(@member.id), notice: "会員情報を更新しました"
+    else
+      render "edit"
+    end
+  end
+
   def search
     # member.rbのsearchアクションを利用
     @members = Member.search(params[:q])
