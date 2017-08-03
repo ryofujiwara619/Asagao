@@ -17,6 +17,7 @@ class MembersController < ApplicationController
       redirect_to member_path(@member.id), notine: "会員を登録しました"
     else
       render "new"
+    end
   end
 
   def edit
