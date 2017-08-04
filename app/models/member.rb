@@ -7,9 +7,9 @@ class Member < ActiveRecord::Base
 
   # name:空を禁止、半角英数字のみ、文字列の先頭はアルファベット、2文字以上20文字以下重複禁止
   validates :name, presence: true,
-    format: { with: /\A[A-Za-z]\W*\Z/, allow_blank: true },
+    format: { with: /\A[A-Za-z]\w*\Z/, allow_blank: true },
     length: { minimum: 2, maximum: 20, allow_blank: true },
-    uniqueness: { case_sensitive: false }
+    uniqueness: { case_sensitive: false } # case_sensitive = 大文字と小文字の区別:false
 
   # full_name:20文字以下、空あり
   validates :full_name, length: { maximum: 20 }
