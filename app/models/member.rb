@@ -26,6 +26,8 @@ class Member < ActiveRecord::Base
   # end
 
 
+attr_accessor :password, :password_confirmation
+
 # paramsが存在するなら検索、存在しないなら全て表示
   class << self
     def search (query)
