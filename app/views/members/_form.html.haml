@@ -45,3 +45,20 @@
     %td
       = f.check_box :administrator
       = f.label :administrator
+
+  %tr
+    %th
+      = f.label :password
+    %td
+      = f.password_field :password
+
+  %tr
+    %th
+      = f.label :password_confirmation
+    %td
+      = f.password_field :password_confirmation
+
+-# new_record?メソッド: 新しいレコードかどうかチェックする
+- unless @member.new_record?
+  %p
+    パスワードを変更しない場合は、パスワード入力欄を空にしてください
