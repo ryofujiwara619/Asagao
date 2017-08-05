@@ -38,6 +38,7 @@ group :development, :test do
   gem 'haml-rails'
   gem 'erb2haml'
   gem 'pry-rails'
+  gem 'rails-i18n'
 
 end
 

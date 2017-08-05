@@ -2,19 +2,19 @@
 %table.attr
   %tr
     %th
-      = f.label :number, "背番号"
+      = f.label :number
     %td
       = f.text_field :number, size: "8"
 
   %tr
     %th
-      = f.label :name, "ユーザー名"
+      = f.label :name
     %td
       = f.text_field :name
 
   %tr
     %th
-      = f.label :full_name, "氏名"
+      = f.label :full_name
     %td
       = f.text_field :full_name
 
@@ -23,19 +23,19 @@
       性別
     %td
       = f.radio_button :gender, 0
-      = f.label :gender_0, "男"
+      = f.label :gender_0
       = f.radio_button :gender, 1
-      = f.label :gender_1, "女"
+      = f.label :gender_1
 
   %tr
     %th
-      = f.label :birthday, "誕生日", for: "member_birthday_li"
+      = f.label :birthday, for: "member_birthday_li"
     %td
       = f.date_select :birthday, start_year: 1940, end_year: Time.now.year, use_month_numbers: true
 
   %tr
     %th
-      = f.label :email, "メールアドレス"
+      = f.label :email
     %td
       = f.text_field :email
 
@@ -44,4 +44,4 @@
       管理者
     %td
       = f.check_box :administrator
-      = f.label :administrator, "管理者"
+      = f.label :administrator

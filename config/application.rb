@@ -17,5 +17,8 @@ module Asagao
     config.time_zone = "Tokyo"
 
     config.action_controller.permit_all_parameters = true
+
+    # 日本語化
+    config.i18n.default_locale = :ja
   end
 end
