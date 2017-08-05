@@ -12,6 +12,9 @@
       #header
         = render "shared/header"
       #content
+        - if flash.notice
+          %p.notice
+            = flash.notice
         = yield
       #sidebar
         = render "shared/sidebar"
